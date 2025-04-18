@@ -1,83 +1,100 @@
-/* the full site config */
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Full site defaults */
 html {
-  font-family: fantasy;
-  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #F4F5F5;
+  color: #2B2430;
 }
 
-/* The overall site body */
-body{
-  margin: 0;
-}
-
-/* The container which holds everything in the body */
-.container {
-  outline:black 1px solid; 
-  height: 100%;
+/* Setting up the main body container (whole site sits in here) */
+body {
+  min-height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto auto auto; 
 }
 
 /* The header box */
 header{
-  margin: 0;
-  background-color: rgb(6, 55, 31);
-  width: 100%;
-  height: 5em;
+  background-color:#9EA5A3;
+  font-family: fantasy;
+  color: #2B2430;
+  /* height: 100%; */
   padding: 2em;
 }
 
-/* The header text */
-h1{
-  color: white;
+h1 {
   font-size: 200%;
-}
-
-.side {
-  background-color: black;
-  min-height: 100vh;
 }
 
 /* The container which holds the sidebar and main content */
 .main-container {
-  display: flex;
-  padding: 2px;
+  display: grid;
+  grid-template-columns: 200px auto;
 }
 
 /* The side navigation menu */
 .sidebar {
-  padding-right: 2px;
-  width: 200px;
-  background-color: black;
+  width: 100%;
+  background-color: #827E72;
   height: 100%;
-  overflow: auto;
 }
 
 /* Sidebar links */
 .sidebar a {
   display: block;
-  color: white;
-  padding: 16px;
+  color: #F4F5F5;
+  font-size: 1.2rem;
+  padding: 1em;
+  /* padding-right: 3em; */
   text-decoration: none;
+  font-family:'Courier New', Courier, monospace;
+  width: 100%;
 }
 
 /* Active/current link */
 .sidebar a.active {
-  background-color: rgb(6, 55, 31);
-  color: white;
+  background-color: #7C7064;
+  width: 100%;
 }
 
 /* Links on mouse-over */
 .sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: black;
+  background-color: #7C7064;
+  width: 100%;
 }
 
 /* Style page content */
 main {
-  background-color: grey;
-  padding: 20px 20px;
-  height: 100%;
+  padding: 2%;
   width: 100%;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.bodyheader {
+  padding: 1em;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bolder;
+  padding-bottom: 0.5em;
+}
+
+iframe {
+  width: 100%;
+  height: 90vh;
+}
+
+footer {
+  background-color: #9EA5A3;
+  padding: 1em;
 }
