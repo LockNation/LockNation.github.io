@@ -35,15 +35,16 @@ h1 {
 
 /* The container which holds the sidebar and main content */
 .main-container {
-  display: grid;
-  grid-template-columns: 200px auto;
+  display: flex;
+  flex-direction: row;
 }
 
 /* The side navigation menu */
 .sidebar {
-  width: 100%;
+  width: 200px;
   background-color: #827E72;
   height: 100%;
+  display: none;
 }
 
 /* Sidebar links */
@@ -97,4 +98,31 @@ iframe {
 footer {
   background-color: #9EA5A3;
   padding: 1em;
+}
+
+.collapse {
+  background-color: #827E72;
+  color: #F4F5F5;
+  margin: 5px;
+  width: 90%;
+  padding: 1em;
+  font-size: 1.2rem;
+  border: 0;
+}
+
+.collapse:hover {
+  background-color: #7C7064;
+}
+
+.open_sb {
+  width: 40px;
+  height: 40px;
+  background-color: #827E72;
+  color: #F4F5F5;
+  border: 0;
+  border-radius: 15%;
+}
+
+.open_sb:hover {
+  background-color: #7C7064;
 }
